@@ -32,11 +32,11 @@ function scrollHandler(event){
     event.preventDefault();
     const delta = Math.sign(event.deltaY);
     if(delta>0){
-        current_card=((current_card)%3)+1
+        current_card=((current_card)%5)+1
     }
     else{
         
-        current_card=(3+(current_card-1))%4
+        current_card = (current_card + 3) % 5 + 1;
         console.log(current_card)
     }
     renderMenu(current_card);
